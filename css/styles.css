@@ -1,0 +1,15 @@
+header {
+  background-color: #562b81;
+}
+
+header > .container {
+  padding: 15px 0;
+}
+
+header h1 {
+  color: #fefefe;
+  font-family: "Poza Libre", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
