@@ -2,6 +2,7 @@
 /* exported data */
 
 const weekDays = document.querySelector('#week-days');
+const addEntry = document.querySelector('#add-entry');
 
 let dataView = '';
 
@@ -18,3 +19,8 @@ function eventTarget(event) {
     console.log(dataView);
   }
 }
+
+addEntry.addEventListener('click', event => {
+  // eslint-disable-next-line
+  console.log('you have clicked me tehe');
+});
