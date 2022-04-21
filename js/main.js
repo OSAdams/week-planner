@@ -8,6 +8,9 @@ let dataView = '';
 weekDays.addEventListener('click', eventTarget);
 
 function eventTarget(event) {
+  if ('#' + event.target.getAttribute('id') === window.location.hash) {
+    return;
+  }
   if (event.target.getAttribute('class') === 'day fl-ai-jc-cen') {
     location.hash = '#' + event.target.getAttribute('id');
     dataView = event.target.getAttribute('id');
