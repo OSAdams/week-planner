@@ -37,3 +37,18 @@ div.day:active,
 div.add-entry:active {
   background-color: #b6b6b6;
 }
+
+.day {
+  width: 100px;
+  height: 75px;
+}
+
+.add-entry {
+  width: 150px;
+  height: 35px;
+}
+
+div.column-full.fl-row.space-around {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}

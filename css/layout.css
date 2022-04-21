@@ -32,21 +32,6 @@
   justify-content: space-around;
 }
 
-.day {
-  width: 100px;
-  height: 75px;
-}
-
-.add-entry {
-  width: 125px;
-  height: 35px;
-}
-
-div.column-full.fl-row.space-around {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
 @media screen and (min-width: 768px) {
   .container {
     max-width: 900px;
