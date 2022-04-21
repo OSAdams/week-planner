@@ -1,3 +1,7 @@
+body {
+  background-color: #fefefe;
+}
+
 header {
   background-color: #562b81;
 }
@@ -12,4 +16,24 @@ header h1 {
   font-size: 20px;
   font-weight: 400;
   text-align: center;
+}
+
+div.day,
+div.add-entry {
+  border: 3px solid #562b81;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+  transition: background-color 0.15s ease;
+}
+
+div.day,
+div.day > p,
+div.add-entry,
+div.add-entry > p {
+  cursor: pointer;
+}
+
+div.day:active,
+div.add-entry:active {
+  background-color: #b6b6b6;
 }
