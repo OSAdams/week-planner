@@ -70,6 +70,21 @@ div.entry-modal > .container {
   width: 100%;
 }
 
+div.entry-modal h2 {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+select#day-select:focus,
+select#day-select:active {
+  border-color: #562b81;
+}
+
+select:last-child {
+  margin-left: 20px;
+}
+
 .hidden {
   display: none;
 }
