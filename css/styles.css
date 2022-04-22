@@ -76,9 +76,21 @@ div.entry-modal h2 {
   margin-bottom: 15px;
 }
 
+textarea#description-text {
+  width: 100%;
+  height: 200px;
+}
+
 select#day-select:focus,
-select#day-select:active {
+select#day-select:active,
+textarea#description-text:focus,
+textarea#description-text:active {
   border-color: #562b81;
+}
+
+#entry-form > .row {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 select:last-child {
