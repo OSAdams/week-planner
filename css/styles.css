@@ -88,7 +88,7 @@ textarea#description-text:active {
   border-color: #562b81;
 }
 
-#entry-form > .row {
+#entry-form > div.row:nth-child(even) {
   margin-top: 15px;
   margin-bottom: 15px;
 }
