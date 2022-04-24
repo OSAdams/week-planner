@@ -36,7 +36,8 @@ button.submit-entry {
   height: 75px;
 }
 
-.add-entry {
+.add-entry,
+button.submit-entry {
   width: 150px;
   height: 35px;
 }
