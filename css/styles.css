@@ -13,3 +13,111 @@ header h1 {
   font-weight: 400;
   text-align: center;
 }
+
+div.day,
+div.add-entry,
+button.add-entry {
+  border: 2px solid #b6b6b6;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+  transition: background-color 0.15s ease;
+}
+
+div.day,
+div.day > p,
+div.add-entry,
+div.add-entry > p,
+button.submit-entry {
+  cursor: pointer;
+}
+
+.day {
+  width: 100px;
+  height: 75px;
+}
+
+.add-entry,
+button.submit-entry {
+  width: 150px;
+  height: 35px;
+}
+
+div.column-full.fl-row.space-around {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+div.entry-modal {
+  position: absolute;
+  background-color: rgba(41, 41, 41, 0.75);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+div.entry-modal > .container {
+  height: 400px;
+  background-color: #fefefe;
+  border: 2px solid #562b81;
+  border-radius: 3px;
+  width: 100%;
+}
+
+div.entry-modal h2 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+textarea#description-text {
+  width: 100%;
+  height: 200px;
+}
+
+select#day-select,
+select#time-select,
+textarea#description-text {
+  border: 2px solid #b6b6b6;
+  border-radius: 2px;
+}
+
+select#day-select:focus,
+select#time-select:focus,
+textarea#description-text:focus,
+button.submit-entry {
+  outline: none;
+  border: 2px solid #562b81;
+  border-radius: 3px;
+}
+
+button.submit-entry {
+  border-color: #b6b6b6;
+  transition: border-color 0.15s ease;
+  float: right;
+}
+
+div.day:active,
+div.add-entry:active,
+button.submit-entry:active {
+  background-color: #b6b6b6;
+}
+
+button.submit-entry:active {
+  border-color: #562b81;
+}
+
+#entry-form > div.row {
+  margin-top: 15px;
+}
+
+select:last-child {
+  margin-left: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.active-border {
+  border-color: #562b81;
+}

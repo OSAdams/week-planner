@@ -17,6 +17,21 @@
   width: 100%;
 }
 
+.fl-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.fl-ai-jc-cen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 900px;
