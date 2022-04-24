@@ -1,26 +1,34 @@
-/* global data */
-/* exported data */
+/* global weeklyPlannerData */
+/* exported weeklyPlannerData */
 
 const weekDays = document.querySelector('#week-days');
 const addEntry = document.querySelector('#add-entry');
+const entryForm = document.querySelector('#entry-form');
+const entryModal = document.querySelector('.entry-modal');
 
-let dataView = '';
-
-weekDays.addEventListener('click', eventTarget);
-
-function eventTarget(event) {
-  if ('#' + event.target.getAttribute('id') === window.location.hash) {
-    return;
-  }
-  if (event.target.getAttribute('class') === 'day fl-ai-jc-cen') {
-    location.hash = '#' + event.target.getAttribute('id');
-    dataView = event.target.getAttribute('id');
-    // eslint-disable-next-line
-    console.log(dataView);
-  }
+function weekDayHash(event) {
+  window.location.hash = '#' + event.target.textContent;
 }
 
+weekDays.addEventListener('click', weekDayHash);
+
 addEntry.addEventListener('click', event => {
-  // eslint-disable-next-line
-  console.log('you have clicked me tehe');
+  entryModal.setAttribute('class', 'entry-modal fl-ai-jc-cen');
 });
+
+function saveEntryData(event) {
+  event.preventDefault();
+  if (weeklyPlannerData.editing === null) {
+    const plannerEntry = {
+      day: entryForm[0].value,
+      time: entryForm[1].value,
+      description: entryForm[2].value,
+      entryId: weeklyPlannerData.nextEntryId++
+    };
+    weeklyPlannerData.entries.push(plannerEntry);
+    entryForm.reset();
+  }
+  entryModal.setAttribute('class', 'entry-modal fl-ai-jc-cen hidden');
+}
+
+entryForm.addEventListener('submit', saveEntryData);
