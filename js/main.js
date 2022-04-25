@@ -32,3 +32,7 @@ function saveEntryData(event) {
 }
 
 entryForm.addEventListener('submit', saveEntryData);
+
+const weewoo = 'set up issue on github';
+// eslint-disable-next-line
+console.log(weewoo);
