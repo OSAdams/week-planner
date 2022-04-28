@@ -32,3 +32,7 @@ function saveEntryData(event) {
 }
 
 entryForm.addEventListener('submit', saveEntryData);
+
+const testTwo = 'hello world';
+// eslint-disable-next-line
+console.log(testTwo);
