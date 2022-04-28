@@ -2,7 +2,6 @@
 const savedWeeklyPlannerDataJSON = localStorage.getItem('weekly-planner-local-storage');
 
 let weeklyPlannerData = {
-  view: 'entry-form',
   entries: [],
   editing: null,
   nextEntryId: 1
