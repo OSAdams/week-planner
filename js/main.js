@@ -33,6 +33,17 @@ function saveEntryData(event) {
 
 entryForm.addEventListener('submit', saveEntryData);
 
-const testTwo = 'hello world';
-// eslint-disable-next-line
-console.log(testTwo);
+/*
+  <tr>
+    <td> 01:00 </td>
+    <td> 'Description' </td>
+  </tr>
+
+  -Define a function that'll take the parsed object as the argument.
+  -In the function we're going to push the objects into an array that matches the
+  window hash or text content of the button clicked
+  -Once these objects are in the array, we're doing to sort the array by time value
+  -Create an element like the example posted above
+  -Update the text content
+  -push() the element into the table
+*/
