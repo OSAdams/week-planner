@@ -47,3 +47,11 @@ entryForm.addEventListener('submit', saveEntryData);
   -Update the text content
   -push() the element into the table
 */
+
+function populateEntryList(object) {
+  const tableRow = document.createElement('tr');
+  const tableData = document.createElement('td');
+  return tableRow + tableData;
+}
+
+populateEntryList();
