@@ -8,6 +8,14 @@ const entryModal = document.querySelector('.entry-modal');
 
 function weekDayHash(event) {
   window.location.hash = '#' + event.target.textContent;
+  const windowHash = event.target.textContent;
+  // eslint-disable-next-line
+  console.log(windowHash);
+  // for (let dayIndex = 0; dayIndex < weekDays.children.length; dayIndex++) {
+  //   if (event.target.textContent === window.location.hash.slice(1)) {
+  //     event.target.className += ' active-border';
+  //   }
+  // }
 }
 
 weekDays.addEventListener('click', weekDayHash);
@@ -48,15 +56,13 @@ entryForm.addEventListener('submit', saveEntryData);
   -push() the element into the table
 */
 
-function populateEntryList(object) {
-  const windowHash = window.location.hash;
-  const dayHash = windowHash.slice(1).toLowerCase();
-  for (const dayIndex of object.entries) {
-    if (dayHash === dayIndex.day) {
-    // eslint-disable-next-line
-    console.log(dayIndex);
-    }
-  }
-}
-
-populateEntryList(weeklyPlannerData);
+// function populateEntryList(event) {
+//   const windowHash = window.location.hash;
+//   const dayHash = windowHash.slice(1).toLowerCase();
+//   for (const dayIndex of weeklyPlannerData.entries) {
+//     if (dayHash === dayIndex.day) {
+//     // eslint-disable-next-line
+//     console.log(dayIndex);
+//     }
+//   }
+// }
