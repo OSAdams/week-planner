@@ -49,9 +49,14 @@ entryForm.addEventListener('submit', saveEntryData);
 */
 
 function populateEntryList(object) {
-  const tableRow = document.createElement('tr');
-  const tableData = document.createElement('td');
-  return tableRow + tableData;
+  const windowHash = window.location.hash;
+  const dayHash = windowHash.slice(1).toLowerCase();
+  for (const dayIndex of object.entries) {
+    if (dayHash === dayIndex.day) {
+    // eslint-disable-next-line
+    console.log(dayIndex);
+    }
+  }
 }
 
-populateEntryList();
+populateEntryList(weeklyPlannerData);
