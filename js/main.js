@@ -7,6 +7,10 @@ const entryForm = document.querySelector('#entry-form');
 const entryModal = document.querySelector('.entry-modal');
 const tableDayTitle = document.querySelector('#table-title');
 
+window.addEventListener('DOMContentLoaded', event => {
+  window.location.hash = '#Monday';
+});
+
 function updateDay(event) {
   if (event.target.className !== 'day fl-ai-jc-cen') {
     return null;
