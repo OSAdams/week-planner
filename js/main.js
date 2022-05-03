@@ -5,20 +5,25 @@ const weekDays = document.querySelector('#week-days');
 const addEntry = document.querySelector('#add-entry');
 const entryForm = document.querySelector('#entry-form');
 const entryModal = document.querySelector('.entry-modal');
+const tableDayTitle = document.querySelector('#table-title');
 
-function weekDayHash(event) {
-  window.location.hash = '#' + event.target.textContent;
-  const windowHash = event.target.textContent;
-  // eslint-disable-next-line
-  console.log(windowHash);
-  // for (let dayIndex = 0; dayIndex < weekDays.children.length; dayIndex++) {
-  //   if (event.target.textContent === window.location.hash.slice(1)) {
-  //     event.target.className += ' active-border';
-  //   }
-  // }
+function updateDay(event) {
+  if (event.target.className !== 'day fl-ai-jc-cen') {
+    return null;
+  } else {
+    window.location.hash = '#' + event.target.textContent;
+    for (let dayIndex = 0; dayIndex < weekDays.children.length; dayIndex++) {
+      if (weekDays.children[dayIndex].textContent === window.location.hash.slice(1)) {
+        weekDays.children[dayIndex].className += ' active-border';
+        tableDayTitle.textContent = event.target.textContent;
+      } else {
+        weekDays.children[dayIndex].className = 'day fl-ai-jc-cen';
+      }
+    }
+  }
 }
 
-weekDays.addEventListener('click', weekDayHash);
+weekDays.addEventListener('click', updateDay);
 
 addEntry.addEventListener('click', event => {
   entryModal.setAttribute('class', 'entry-modal fl-ai-jc-cen');
