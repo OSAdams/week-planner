@@ -66,12 +66,16 @@ entryForm.addEventListener('submit', saveEntryData);
 */
 
 // function populateEntryList(event) {
+//   const tableRow = document.createElement('tr');
+//   const tableData = document.createElement('td');
+//   const sortWeeklyData = [];
 //   const windowHash = window.location.hash;
 //   const dayHash = windowHash.slice(1).toLowerCase();
 //   for (const dayIndex of weeklyPlannerData.entries) {
 //     if (dayHash === dayIndex.day) {
-//     // eslint-disable-next-line
-//     console.log(dayIndex);
+//       sortWeeklyData.push(dayIndex);
+//       dayIndex.time = parseInt(dayIndex.time);
 //     }
 //   }
+//   console.log(sortWeeklyData);
 // }
