@@ -74,6 +74,11 @@ entryForm.addEventListener('submit', saveEntryData);
 //   for (const dayIndex of weeklyPlannerData.entries) {
 //     if (dayHash === dayIndex.day) {
 //       sortWeeklyData.push(dayIndex);
+//       if (dayIndex.time.length < 2) {
+//         dayIndex.time = '0' + dayIndex.time + ':00';
+//       } else {
+//         dayIndex.time += ':00';
+//       }
 //       dayIndex.time = parseInt(dayIndex.time);
 //     }
 //   }
