@@ -6,6 +6,8 @@ const addEntry = document.querySelector('#add-entry');
 const entryForm = document.querySelector('#entry-form');
 const entryModal = document.querySelector('.entry-modal');
 const tableDayTitle = document.querySelector('#table-title');
+// eslint-disable-next-line
+const entryTable = document.querySelector('#entry-table');
 
 window.addEventListener('DOMContentLoaded', event => {
   window.location.hash = '#Monday';
@@ -66,21 +68,22 @@ entryForm.addEventListener('submit', saveEntryData);
 */
 
 // function populateEntryList(event) {
-//   const tableRow = document.createElement('tr');
-//   const tableData = document.createElement('td');
 //   const sortWeeklyData = [];
 //   const windowHash = window.location.hash;
 //   const dayHash = windowHash.slice(1).toLowerCase();
 //   for (const dayIndex of weeklyPlannerData.entries) {
 //     if (dayHash === dayIndex.day) {
+//       const tableRow = document.createElement('tr');
+//       const tDTime = document.createElement('td');
+//       const tDDesc = document.createElement('td');
+//       tDTime.textContent = sortWeeklyData.time;
+//       tDDesc.textContent = sortWeeklyData.description;
+//       tableRow.appendChild(tDTime);
+//       tableRow.appendChild(tDDesc);
+//       entryTable.appendChild(tableRow);
 //       sortWeeklyData.push(dayIndex);
-//       if (dayIndex.time.length < 2) {
-//         dayIndex.time = '0' + dayIndex.time + ':00';
-//       } else {
-//         dayIndex.time += ':00';
-//       }
-//       dayIndex.time = parseInt(dayIndex.time);
+//       console.log(dayIndex.time.length);
 //     }
 //   }
-//   console.log(sortWeeklyData);
+//   return sortWeeklyData;
 // }
