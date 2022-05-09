@@ -137,3 +137,9 @@ div.day.active-border {
   width: 105px;
   height: 80px;
 }
+
+table.entry-table {
+  margin-top: 25px;
+  border: 2px solid #562b81;
+  border-radius: 3px;
+}

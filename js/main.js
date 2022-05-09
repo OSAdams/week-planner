@@ -7,7 +7,7 @@ const entryForm = document.querySelector('#entry-form');
 const entryModal = document.querySelector('.entry-modal');
 const tableDayTitle = document.querySelector('#table-title');
 // eslint-disable-next-line
-const entryTable = document.querySelector('#entry-table');
+const entryData = document.querySelector('#entry-data');
 
 window.addEventListener('DOMContentLoaded', event => {
   window.location.hash = '#Monday';
@@ -27,6 +27,7 @@ function updateDay(event) {
       }
     }
   }
+  populateEntryList();
 }
 
 weekDays.addEventListener('click', updateDay);
@@ -67,23 +68,24 @@ entryForm.addEventListener('submit', saveEntryData);
   -push() the element into the table
 */
 
-// function populateEntryList(event) {
-//   const sortWeeklyData = [];
-//   const windowHash = window.location.hash;
-//   const dayHash = windowHash.slice(1).toLowerCase();
-//   for (const dayIndex of weeklyPlannerData.entries) {
-//     if (dayHash === dayIndex.day) {
-//       const tableRow = document.createElement('tr');
-//       const tDTime = document.createElement('td');
-//       const tDDesc = document.createElement('td');
-//       tDTime.textContent = sortWeeklyData.time;
-//       tDDesc.textContent = sortWeeklyData.description;
-//       tableRow.appendChild(tDTime);
-//       tableRow.appendChild(tDDesc);
-//       entryTable.appendChild(tableRow);
-//       sortWeeklyData.push(dayIndex);
-//       console.log(dayIndex.time.length);
-//     }
-//   }
-//   return sortWeeklyData;
-// }
+function populateEntryList() {
+  const sortWeeklyData = [];
+  const windowHash = window.location.hash;
+  const dayHash = windowHash.slice(1).toLowerCase();
+  entryData.innerHTML = '';
+  for (const dayIndex of weeklyPlannerData.entries) {
+    if (dayHash === dayIndex.day) {
+      sortWeeklyData.push(dayIndex);
+    }
+  }
+  for (let displayIndex = 0; displayIndex < sortWeeklyData.length; displayIndex++) {
+    const tableRow = document.createElement('tr');
+    const tDTime = document.createElement('td');
+    const tDDesc = document.createElement('td');
+    tDTime.textContent = sortWeeklyData[displayIndex].time;
+    tDDesc.textContent = sortWeeklyData[displayIndex].description;
+    tableRow.appendChild(tDTime);
+    tableRow.appendChild(tDDesc);
+    entryData.appendChild(tableRow);
+  }
+}
